@@ -5,7 +5,7 @@ Feature: Progress Bar
     Given the user is in UITAP Home
       And the user opens "Progress Bar" page
 
-    Scenario Outline:
+    Scenario Outline: A user stop the top bar in different percentages
       Given the user clicks on Start
         And the user waits for "<percentage>" percentage
       When the user clicks on Stop
