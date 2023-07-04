@@ -3,6 +3,7 @@ package ui.pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class ProgressBarPage extends BasePage {
 
@@ -20,6 +21,7 @@ public class ProgressBarPage extends BasePage {
 
     public ProgressBarPage(WebDriver driver) {
         super(driver);
+        PageFactory.initElements(driver, this);
     }
 
     public void start(){
