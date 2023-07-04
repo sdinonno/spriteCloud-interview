@@ -70,4 +70,11 @@ public class BasePage {
         throw new NoSuchElementException("Cannot find element.");
     }
 
+    protected void waitForAttribute(WebElement element, String attribute, String value){
+        Wait<WebDriver> wait = new FluentWait<>(driver).withTimeout(Duration.ofSeconds(75))
+                .pollingEvery(Duration.ofSeconds(1))
+                .ignoring(Exception.class);
+        wait.until(ExpectedConditions.attributeToBe(element, attribute, value));
+    }
+
 }
