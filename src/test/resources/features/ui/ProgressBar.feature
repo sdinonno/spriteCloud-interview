@@ -1,3 +1,4 @@
+@regression @ui @progressBar
 Feature: Progress Bar
 
   Background:

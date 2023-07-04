@@ -1,4 +1,4 @@
-@regression @ui
+@regression @ui @sampleApp
 Feature: Sample App
 
   Background:
@@ -8,7 +8,7 @@ Feature: Sample App
     Scenario:
       Given the user has valid credentials
       When the user performs a log in with their credentials
-        Then the user sees a successfully login message
+      Then the user sees a successfully login message
 
     Scenario:
       Given the user has invalid credentials
