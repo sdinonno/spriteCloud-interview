@@ -15,7 +15,6 @@ public class Hooks {
         driver = DriverManager.createDriver();
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
-        driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
         driver.navigate().to("http://www.uitestingplayground.com");
     }
 
