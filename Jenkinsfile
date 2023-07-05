@@ -3,7 +3,7 @@ pipeline {
 
     tools {
         PATH_WORKSPACE = "${env.WORKSPACE}"
-        PATH_REPORTS = "${env.WORKSPACE}//reports"
+        PATH_REPORTS = "${env.WORKSPACE}/reports"
     }
 
     parameters {
@@ -25,9 +25,6 @@ pipeline {
     }
 
     stages{
-        stage('Build') {
-
-        }
         stage('Git') {
             steps {
                 checkout([
@@ -39,7 +36,9 @@ pipeline {
             }
         }
         stage('Execution') {
-
+            catchError(buildResult: 'Success', stageResult: 'FAILURE'){
+                sh 'mvn clean test -Dcucumber.filter.tags="${TAG_TO_EXECUTE]"'
+            }
         }
     }
 
@@ -49,7 +48,7 @@ pipeline {
                 emailext body: "Please go to ${BUILD_URL} and verify the build." ,
                     subject: "Pipeline '${JOB_NAME}' (${BUILD_NUMBER})",
                     to: '${SEND_EMAIL_TO}',
-                    attachmentsPattern: "Lucky Web - Spark report.html"
+                    attachmentsPattern: "report.html"
             }
 
             cleanWs()
