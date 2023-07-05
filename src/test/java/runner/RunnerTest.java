@@ -11,7 +11,7 @@ import org.testng.annotations.DataProvider;
         plugin = {"pretty", "html:reports/report.html"}
 )
 
-public class Runner extends AbstractTestNGCucumberTests {
+public class RunnerTest extends AbstractTestNGCucumberTests {
 
     @Override
     @DataProvider(parallel = false)
