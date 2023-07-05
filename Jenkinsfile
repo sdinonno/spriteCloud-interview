@@ -18,7 +18,7 @@ pipeline {
             description: "Tags to execute"
         )
         string(
-            defaultValue: 'develop',
+            defaultValue: 'main',
             description: 'Branch:',
             name: 'BRANCH'
         )
