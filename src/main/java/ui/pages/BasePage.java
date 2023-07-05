@@ -71,8 +71,8 @@ public class BasePage {
     }
 
     protected void waitForAttribute(WebElement element, String attribute, String value){
-        Wait<WebDriver> wait = new FluentWait<>(driver).withTimeout(Duration.ofSeconds(75))
-                .pollingEvery(Duration.ofSeconds(1))
+        Wait<WebDriver> wait = new FluentWait<>(driver).withTimeout(Duration.ofSeconds(60))
+                .pollingEvery(Duration.ofMillis(10))
                 .ignoring(Exception.class);
         wait.until(ExpectedConditions.attributeToBe(element, attribute, value));
     }
