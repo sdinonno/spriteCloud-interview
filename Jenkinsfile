@@ -2,6 +2,10 @@ pipeline {
     agent any
 
     tools {
+        maven 'MAVEN'
+    }
+
+    environment {
         PATH_WORKSPACE = "${env.WORKSPACE}"
         PATH_REPORTS = "${env.WORKSPACE}/reports"
     }
