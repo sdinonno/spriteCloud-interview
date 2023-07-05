@@ -39,7 +39,7 @@ pipeline {
         stage('Execution') {
             steps {
                 catchError(buildResult: 'Success', stageResult: 'FAILURE'){
-                    bat 'mvn clean test -Dcucumber.filter.tags=${TAG_TO_EXECUTE]'
+                    bat 'mvn clean test -Dcucumber.filter.tags=${TAG_TO_EXECUTE}'
                 }
             }
         }
