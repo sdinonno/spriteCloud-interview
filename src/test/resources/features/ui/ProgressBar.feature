@@ -13,3 +13,7 @@ Feature: Progress Bar
       Examples:
         | percentage | number |
         | 75         | 0      |
+        | 50         | -25    |
+        | 74         | -1     |
+        | 76         | 1      |
+        | 90         | 15     |
