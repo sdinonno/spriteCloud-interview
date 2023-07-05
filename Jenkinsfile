@@ -1,10 +1,6 @@
 pipeline {
     agent any
 
-    tools {
-        maven 'MAVEN'
-    }
-
     environment {
         PATH_WORKSPACE = "${env.WORKSPACE}"
         PATH_REPORTS = "${env.WORKSPACE}/reports"
@@ -39,9 +35,12 @@ pipeline {
                 ])
             }
         }
+
         stage('Execution') {
-            catchError(buildResult: 'Success', stageResult: 'FAILURE'){
-                sh 'mvn clean test -Dcucumber.filter.tags="${TAG_TO_EXECUTE]"'
+            steps {
+                catchError(buildResult: 'Success', stageResult: 'FAILURE'){
+                    sh 'mvn clean test -Dcucumber.filter.tags="${TAG_TO_EXECUTE]"'
+                }
             }
         }
     }
