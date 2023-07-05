@@ -34,7 +34,7 @@ pipeline {
                         $class: 'GitSCM',
                         branches: [[name: '*/${BRANCH}']],
                         extensions: [[$class: 'LocalBranch', localBranch: '${BRANCH}']],
-                        url: 'https://github.com/sdinonno/spriteCloud-interview/']]
+                        url: 'https://github.com/sdinonno/spriteCloud-interview/'
                 ])
             }
         }
