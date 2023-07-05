@@ -1,19 +1,15 @@
 package steps;
 
-import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import models.User;
-import org.json.simple.JSONObject;
-import util.Helper;
 
 import java.io.File;
-import java.util.*;
+import java.util.Random;
 
 import static io.restassured.RestAssured.given;
 
