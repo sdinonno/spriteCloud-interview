@@ -4,17 +4,18 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.cucumber.java.hu.Ha;
 import org.testng.Assert;
 import ui.cucumber.TestContext;
 import ui.pages.SampleAppPage;
 import util.Helper;
 
-import java.util.Map;
+import java.util.HashMap;
 
 public class SampleAppStepsDef {
     TestContext testContext;
     private final SampleAppPage sampleAppPage;
-    private Map<String, String> credentials;
+    private final HashMap<String, String> credentials = new HashMap<String, String>();
 
     public SampleAppStepsDef(TestContext context){
         testContext = context;

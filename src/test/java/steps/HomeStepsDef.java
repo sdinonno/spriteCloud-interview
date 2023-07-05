@@ -17,8 +17,7 @@ public class HomeStepsDef {
     }
     @Given("the user is in UITAP Home")
     public void theUserIsInUITAPHome() {
-        Assert.assertEquals(homePage.getTitle(), "UI Test Automation\n" +
-                "Playground");
+        Assert.assertEquals(homePage.getTitle(), "UI Test Automation Playground");
     }
 
     @And("the user opens {string} page")

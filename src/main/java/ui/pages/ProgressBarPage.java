@@ -37,6 +37,6 @@ public class ProgressBarPage extends BasePage {
     }
 
     public String getResult(){
-        return resultMessage.getText().substring(0,10);
+        return resultMessage.getText().substring(0,9);
     }
 }
