@@ -6,9 +6,9 @@ import org.testng.annotations.DataProvider;
 
 @CucumberOptions(
         features = "src/test/resources/features",
-        glue = "src/test/java/steps",
+        glue = "steps",
         tags = "@regression",
-        plugin = {"pretty", "json:reports/report.json"}
+        plugin = {"pretty", "html:reports/report.html"}
 )
 
 public class Runner extends AbstractTestNGCucumberTests {
