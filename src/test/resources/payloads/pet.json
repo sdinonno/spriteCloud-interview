@@ -1,0 +1,18 @@
+{
+  "id": 123,
+  "category": {
+    "id": 456,
+    "name": "SofiCategory"
+  },
+  "name": "Negro",
+  "photoUrls": [
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS07f2xxAn8ZP1mihzIBRlmPV5S-mnRIHW17w&usqp=CAU"
+  ],
+  "tags": [
+    {
+      "id": 10,
+      "name": "black"
+    }
+  ],
+  "status": "available"
+}
