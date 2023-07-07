@@ -10,7 +10,7 @@ Automation framework for UI testing and APIs for the interview process with spri
 ## How to run the tests?
 ### From command line
 ````shell
-1. cd ../spriteCloud/interview
+1. cd ../spriteCloud-interview
 2. mvn -D clean test
 ````
 
